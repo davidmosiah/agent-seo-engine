@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-seo-engine"
+version = "0.1.0"
+description = "Agent-first SEO quality, intent and opportunity engine with CLI and optional MCP server."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "David Mosiah" }]
+keywords = ["ai-agents", "seo", "mcp", "content-ops", "search-intent", "cli"]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.13.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+agent-seo-engine = "agent_seo_engine.cli:main"
+agent-seo-mcp = "agent_seo_engine.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/davidmosiah/agent-seo-engine"
+Repository = "https://github.com/davidmosiah/agent-seo-engine"
+Issues = "https://github.com/davidmosiah/agent-seo-engine/issues"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
