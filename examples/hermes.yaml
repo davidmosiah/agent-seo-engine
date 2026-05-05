@@ -1,0 +1,6 @@
+mcp_servers:
+  agent_seo:
+    command: agent-seo-mcp
+    args: []
+    sampling:
+      enabled: false

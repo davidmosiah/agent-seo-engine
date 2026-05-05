@@ -1,0 +1,19 @@
+# Agent SEO Engine
+
+Agent-first SEO scoring, search-intent detection and opportunity prioritization with CLI and optional MCP server.
+
+Repository: https://github.com/davidmosiah/agent-seo-engine
+Install: pipx install "git+https://github.com/davidmosiah/agent-seo-engine.git"
+MCP command: agent-seo-mcp
+
+Core tools:
+- agent_seo_manifest
+- agent_seo_connection_status
+- agent_seo_privacy_audit
+- agent_seo_detect_intent
+- agent_seo_score_content
+- agent_seo_prioritize_opportunity
+
+Safety:
+- Runs locally by default.
+- Drafts and analytics exports should stay local unless explicitly shared.

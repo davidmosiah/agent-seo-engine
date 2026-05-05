@@ -1,8 +1,11 @@
 # Agent SEO Engine
 
 [![CI](https://github.com/davidmosiah/agent-seo-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/davidmosiah/agent-seo-engine/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Agent-first SEO scoring, search-intent detection and opportunity prioritization. It packages the useful parts of a production content pipeline into a clean local CLI plus an optional MCP server for Codex, Claude, Cursor, Hermes, OpenClaw and other agent runtimes.
+
+Use it when an agent needs deterministic SEO checks before rewriting, refreshing or publishing content.
 
 ## What It Does
 
@@ -61,6 +64,24 @@ Recommended first calls:
 1. `agent_seo_connection_status`
 2. `agent_seo_privacy_audit`
 3. `agent_seo_score_content`
+
+## Agent Surfaces
+
+| Tool | Purpose |
+|---|---|
+| `agent_seo_manifest` | Install/runtime guidance for agent clients |
+| `agent_seo_connection_status` | Local/offline readiness and optional integration status |
+| `agent_seo_privacy_audit` | Draft, analytics and credential boundaries |
+| `agent_seo_detect_intent` | Search intent classification |
+| `agent_seo_score_content` | Markdown quality checks with exact recommendations |
+| `agent_seo_prioritize_opportunity` | GSC-style opportunity scoring |
+
+## Copy-Paste Agent Prompt
+
+```text
+Use agent-seo-engine. First call agent_seo_connection_status and agent_seo_privacy_audit.
+Score the draft, then propose only edits tied to failed checks or high-impact opportunities.
+```
 
 ## Agent Contract
 
