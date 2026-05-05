@@ -1,5 +1,7 @@
 # Agent SEO Engine
 
+[![CI](https://github.com/davidmosiah/agent-seo-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/davidmosiah/agent-seo-engine/actions/workflows/ci.yml)
+
 Agent-first SEO scoring, search-intent detection and opportunity prioritization. It packages the useful parts of a production content pipeline into a clean local CLI plus an optional MCP server for Codex, Claude, Cursor, Hermes, OpenClaw and other agent runtimes.
 
 ## What It Does
@@ -13,14 +15,16 @@ Agent-first SEO scoring, search-intent detection and opportunity prioritization.
 ## Install
 
 ```bash
-pipx install agent-seo-engine
+pipx install "git+https://github.com/davidmosiah/agent-seo-engine.git"
 ```
 
 With MCP support:
 
 ```bash
-pipx install "agent-seo-engine[mcp]"
+pipx install "git+https://github.com/davidmosiah/agent-seo-engine.git#egg=agent-seo-engine[mcp]"
 ```
+
+PyPI artifacts are build-ready. Registry publish is pending a PyPI API token or trusted-publishing setup.
 
 ## CLI
 
