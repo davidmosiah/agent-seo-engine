@@ -1,7 +1,11 @@
 # Agent SEO Engine
 
+[![GitHub stars](https://img.shields.io/github/stars/davidmosiah/agent-seo-engine?style=flat-square&logo=github)](https://github.com/davidmosiah/agent-seo-engine/stargazers)
 [![CI](https://github.com/davidmosiah/agent-seo-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/davidmosiah/agent-seo-engine/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Agent-first](https://img.shields.io/badge/agent--first-MCP-0ea5a3?style=flat-square)](https://github.com/davidmosiah/agent-seo-engine)
+
+> If this agent-first tool helps your workflow, please star the repo. Stars make this agent-first tooling easier for other builders to discover and help Delx keep shipping open infrastructure.
 
 Agent-first SEO scoring, search-intent detection and opportunity prioritization. It packages the useful parts of a production content pipeline into a clean local CLI plus an optional MCP server for Codex, Claude, Cursor, Hermes, OpenClaw and other agent runtimes.
 
