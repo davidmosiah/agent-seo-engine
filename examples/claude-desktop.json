@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent_seo": {
+      "command": "agent-seo-mcp",
+      "args": []
+    }
+  }
+}
