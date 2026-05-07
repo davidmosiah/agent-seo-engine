@@ -22,16 +22,16 @@ Use it when an agent needs deterministic SEO checks before rewriting, refreshing
 ## Install
 
 ```bash
-pipx install "git+https://github.com/davidmosiah/agent-seo-engine.git"
+pipx install agent-seo-engine
 ```
 
 With MCP support:
 
 ```bash
-pipx install "git+https://github.com/davidmosiah/agent-seo-engine.git#egg=agent-seo-engine[mcp]"
+pipx install "agent-seo-engine[mcp]"
 ```
 
-PyPI release automation is configured with Trusted Publishing. See [docs/pypi-publishing.md](docs/pypi-publishing.md) for the one-time PyPI pending-publisher setup.
+Published on PyPI: [`agent-seo-engine`](https://pypi.org/project/agent-seo-engine/). Release automation uses PyPI Trusted Publishing, so GitHub Actions can publish future versions without long-lived PyPI tokens. See [docs/pypi-publishing.md](docs/pypi-publishing.md).
 
 ## CLI
 
