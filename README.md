@@ -31,7 +31,7 @@ With MCP support:
 pipx install "git+https://github.com/davidmosiah/agent-seo-engine.git#egg=agent-seo-engine[mcp]"
 ```
 
-PyPI artifacts are build-ready. Registry publish is pending a PyPI API token or trusted-publishing setup.
+PyPI release automation is configured with Trusted Publishing. See [docs/pypi-publishing.md](docs/pypi-publishing.md) for the one-time PyPI pending-publisher setup.
 
 ## CLI
 
