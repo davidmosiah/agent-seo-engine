@@ -1,6 +1,6 @@
 # Agent SEO Engine
 
-Agent-first SEO scoring, search-intent detection and opportunity prioritization with CLI and optional MCP server.
+Agent-first SEO scoring, search-intent detection, and opportunity prioritization with CLI and optional MCP server. Built for AI agents that draft, audit, or rank web content. Runs locally by default; no third-party SEO tools required.
 
 Repository: https://github.com/davidmosiah/agent-seo-engine
 PyPI: https://pypi.org/project/agent-seo-engine/
@@ -9,13 +9,29 @@ Install with MCP extras: pipx install "agent-seo-engine[mcp]"
 MCP command: agent-seo-mcp
 
 Core tools:
-- agent_seo_manifest
-- agent_seo_connection_status
-- agent_seo_privacy_audit
-- agent_seo_detect_intent
-- agent_seo_score_content
-- agent_seo_prioritize_opportunity
+- agent_seo_manifest — runtime contract, tool list, supported clients
+- agent_seo_connection_status — local installation health
+- agent_seo_capabilities — supported intent types, scoring axes, locales
+- agent_seo_privacy_audit — what stays local vs what would call third-party APIs
+- agent_seo_detect_intent — classify a query as informational, navigational, commercial, transactional, or local
+- agent_seo_score_content — score an article against a target query (relevance, depth, structure, freshness)
+- agent_seo_prioritize_opportunity — rank a list of opportunities by impact-vs-effort
+- agent_seo_extract_target_terms — pull primary + secondary keywords from a brief
+- agent_seo_outline_for_query — propose a content outline that matches the detected intent
+
+Optional env vars:
+- AGENT_SEO_LOCALE — default "en-US"; "pt-BR" supported
+- AGENT_SEO_CACHE_DIR — default ~/.agent-seo-engine/cache
+- AGENT_SEO_TIMEOUT_S — per-request fetch timeout (when scoring URL content)
+
+Workflow for agents:
+1. Call agent_seo_detect_intent on the user query before drafting content — outline shape changes per intent type.
+2. Use agent_seo_outline_for_query to produce a structure-aware draft skeleton.
+3. After drafting, call agent_seo_score_content to identify gaps before publishing.
+4. For multi-page sites, batch-score with agent_seo_prioritize_opportunity to surface the highest-leverage rewrites.
 
 Safety:
-- Runs locally by default.
-- Drafts and analytics exports should stay local unless explicitly shared.
+- Runs locally by default; only fetches URLs the user explicitly passes.
+- Drafts and analytics exports stay on the user's machine unless explicitly shared.
+- Scoring is heuristic; treat outputs as relative signals, not absolute SERP predictions.
+- Not affiliated with or endorsed by Google, Ahrefs, SEMrush, or any other SEO platform.
