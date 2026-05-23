@@ -1,6 +1,7 @@
 """Agent-first SEO analysis toolkit."""
 
 from .agent import build_agent_manifest, build_connection_status, build_privacy_audit
+from .html_audit import check_image_alt_coverage
 from .intent import SearchIntentAnalyzer
 from .quality import score_markdown
 
@@ -9,5 +10,6 @@ __all__ = [
     "build_agent_manifest",
     "build_connection_status",
     "build_privacy_audit",
+    "check_image_alt_coverage",
     "score_markdown",
 ]
