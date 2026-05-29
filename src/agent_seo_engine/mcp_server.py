@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 
 from .agent import build_agent_manifest, build_connection_status, build_privacy_audit
+from .html_audit import check_image_alt_coverage
 from .intent import SearchIntentAnalyzer
 from .opportunity import prioritize_opportunity
 from .quality import score_markdown
@@ -47,6 +48,11 @@ def create_mcp():
         commercial_intent: float = 0.5,
     ) -> dict:
         return prioritize_opportunity(impressions, clicks, position, conversions, commercial_intent)
+
+    @mcp.tool()
+    def agent_seo_check_image_alt(html: str = "", file_path: str = "") -> dict:
+        text = html or Path(file_path).read_text(encoding="utf-8")
+        return check_image_alt_coverage(text)
 
     return mcp
 

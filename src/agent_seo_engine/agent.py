@@ -31,6 +31,7 @@ def build_agent_manifest(client: str = "generic") -> dict:
             "agent_seo_detect_intent",
             "agent_seo_score_content",
             "agent_seo_prioritize_opportunity",
+            "agent_seo_check_image_alt",
         ],
         "recommended_first_calls": ["agent_seo_connection_status", "agent_seo_privacy_audit"],
         "default_mode": "local_offline",

@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 
 from .agent import build_agent_manifest, build_connection_status, build_privacy_audit
+from .html_audit import check_image_alt_coverage
 from .intent import SearchIntentAnalyzer
 from .opportunity import prioritize_opportunity
 from .quality import score_markdown
@@ -37,6 +38,9 @@ def main(argv: list[str] | None = None) -> int:
     opp.add_argument("--conversions", type=float, default=0.0)
     opp.add_argument("--commercial-intent", type=float, default=0.5)
 
+    image_alt = sub.add_parser("image-alt")
+    image_alt.add_argument("--file", required=True)
+
     args = parser.parse_args(argv)
 
     if args.command == "manifest":
@@ -51,6 +55,8 @@ def main(argv: list[str] | None = None) -> int:
       payload = score_markdown(Path(args.file).read_text(encoding="utf-8"), args.primary_keyword, args.min_words)
     elif args.command == "opportunity":
       payload = prioritize_opportunity(args.impressions, args.clicks, args.position, args.conversions, args.commercial_intent)
+    elif args.command == "image-alt":
+      payload = check_image_alt_coverage(Path(args.file).read_text(encoding="utf-8"))
     else:
       parser.error("unknown command")
 

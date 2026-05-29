@@ -10,8 +10,8 @@
 </h3>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/agent-seo-engine"><img src="https://img.shields.io/npm/v/agent-seo-engine?style=for-the-badge&labelColor=0F172A&color=10B981&logo=npm&logoColor=white" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/agent-seo-engine"><img src="https://img.shields.io/npm/dm/agent-seo-engine?style=for-the-badge&labelColor=0F172A&color=0EA5A3&logo=npm&logoColor=white" alt="npm downloads" /></a>
+  <a href="https://pypi.org/project/agent-seo-engine/"><img src="https://img.shields.io/pypi/v/agent-seo-engine?style=for-the-badge&labelColor=0F172A&color=10B981&logo=pypi&logoColor=white" alt="PyPI version" /></a>
+  <a href="https://pypi.org/project/agent-seo-engine/"><img src="https://img.shields.io/pypi/pyversions/agent-seo-engine?style=for-the-badge&labelColor=0F172A&color=0EA5A3&logo=python&logoColor=white" alt="Python versions" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-22C55E?style=for-the-badge&labelColor=0F172A" alt="License MIT" /></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/BUILT_FOR-MCP-7C3AED?style=for-the-badge&labelColor=0F172A" alt="Built for MCP" /></a>
 </p>
@@ -65,6 +65,7 @@ agent-seo-engine privacy-audit
 agent-seo-engine intent "best ai agent framework"
 agent-seo-engine score --file examples/article.md --primary-keyword "ai agent testing"
 agent-seo-engine opportunity --impressions 4200 --clicks 80 --position 12.4 --commercial-intent 0.8
+agent-seo-engine image-alt --file page.html
 ```
 
 All commands return structured JSON by default. Use `--format markdown` for human review.
@@ -102,6 +103,7 @@ Recommended first calls:
 | `agent_seo_detect_intent` | Search intent classification |
 | `agent_seo_score_content` | Markdown quality checks with exact recommendations |
 | `agent_seo_prioritize_opportunity` | GSC-style opportunity scoring |
+| `agent_seo_check_image_alt` | Image `alt`-attribute coverage audit for HTML |
 
 ## Copy-Paste Agent Prompt
 
