@@ -23,6 +23,8 @@
   <a href="https://github.com/davidmosiah/agent-seo-engine"><img src="https://img.shields.io/badge/CATEGORY-Reach-0EA5A3?style=for-the-badge&labelColor=0F172A" alt="Category" /></a>
 </p>
 
+<p align="center"><code>mcp-name: io.github.davidmosiah/agent-seo-engine</code></p>
+
 > ⭐ **If this agent-first tool helps your workflow, please star the repo.** Stars make this tooling easier for other builders to discover and help Delx keep shipping open infrastructure.<br>
 > 🧱 Part of the [Delx agent stack](https://github.com/davidmosiah) &mdash; 15 open-source MCP servers across **body, reach and coordination**.
 
@@ -134,4 +136,3 @@ python -m compileall -q src
 - 🐛 **Bug reports / feature requests** — [GitHub Issues](https://github.com/davidmosiah/agent-seo-engine/issues)
 - 🐦 **Updates** — [@delx369](https://x.com/delx369) on X
 - 🌐 **Site** — [wellness.delx.ai](https://wellness.delx.ai)
-
