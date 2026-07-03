@@ -34,7 +34,7 @@ agent-seo-mcp = "agent_seo_engine.mcp_server:main"
 Homepage = "https://github.com/davidmosiah/agent-seo-engine"
 Repository = "https://github.com/davidmosiah/agent-seo-engine"
 Issues = "https://github.com/davidmosiah/agent-seo-engine/issues"
-Email = "mailto:support@delx.ai"
+Support = "https://github.com/davidmosiah/agent-seo-engine/issues"
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
