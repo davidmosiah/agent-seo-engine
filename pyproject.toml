@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agent-seo-engine"
-version = "0.1.1"
+version = "0.1.2"
 description = "Agent-first SEO quality, intent and opportunity engine with CLI and optional MCP server."
 readme = "README.md"
 requires-python = ">=3.10"

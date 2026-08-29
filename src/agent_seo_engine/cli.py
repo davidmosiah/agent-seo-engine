@@ -41,6 +41,10 @@ def main(argv: list[str] | None = None) -> int:
     image_alt = sub.add_parser("image-alt")
     image_alt.add_argument("--file", required=True)
 
+    call = sub.add_parser("call")
+    call.add_argument("tool")
+    call.add_argument("--json", dest="payload", default="{}")
+
     args = parser.parse_args(argv)
 
     if args.command == "manifest":
@@ -57,6 +61,20 @@ def main(argv: list[str] | None = None) -> int:
       payload = prioritize_opportunity(args.impressions, args.clicks, args.position, args.conversions, args.commercial_intent)
     elif args.command == "image-alt":
       payload = check_image_alt_coverage(Path(args.file).read_text(encoding="utf-8"))
+    elif args.command == "call":
+      body = json.loads(args.payload) if args.payload else {}
+      if args.tool == "agent_seo_manifest":
+        payload = build_agent_manifest(str(body.get("client", "generic")))
+      elif args.tool == "agent_seo_connection_status":
+        payload = build_connection_status(os.environ)
+      elif args.tool == "agent_seo_privacy_audit":
+        payload = build_privacy_audit()
+      elif args.tool == "agent_seo_detect_intent":
+        payload = SearchIntentAnalyzer().analyze(str(body["keyword"]))
+      else:
+        import sys
+        print(f"Unknown tool: {args.tool}", file=sys.stderr)
+        return 1
     else:
       parser.error("unknown command")
 
