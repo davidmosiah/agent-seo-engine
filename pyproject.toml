@@ -23,8 +23,8 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-mcp = ["mcp>=1.13.0"]
-dev = ["pytest>=8.0"]
+mcp = ["mcp>=1.30.0,<2"]
+dev = ["pytest>=8.0", "tomli>=2.0; python_version < '3.11'"]
 
 [project.scripts]
 agent-seo-engine = "agent_seo_engine.cli:main"
@@ -38,3 +38,4 @@ Support = "https://github.com/davidmosiah/agent-seo-engine/issues"
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+
